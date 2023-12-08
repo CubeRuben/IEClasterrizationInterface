@@ -7,51 +7,53 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="index.css">
+        {% load static %}
+
+        <link rel="stylesheet" href="{% static 'main/index.css' %}">
     </head>
     <body>
         <div class="header">
-            <img src="icon.svg"/>
+            <img src="{% static 'main/icon.svg' %}"/>
             <h2>Определение доходности ИП</h2>  
         </div>
 
         <div class="content">
             <div>
                 <h2>Данные об ИП</h2>
-                <form>
-                    <input type="text" placeholder="Дата открытия ИП" onfocus="(this.type='date')">
-                    <select>
+                <form method="GET">
+                    <input name="date" type="text" placeholder="Дата открытия ИП" onfocus="(this.type='date')">
+                    <select name="region">
                         <option disabled selected hidden="">Регион ИП</option>
-                        <option>Ростов</option>
-                        <option>Москва</option>
-                        <option>Питер</option>
+                        {% for region in regions %}
+                        <option value="{{region.pk}}">{{ region.name }}</option>
+                        {% endfor %}
                     </select>
-                    <select>
+                    <select name="industry">
                         <option disabled selected hidden="">Отрасль ИП</option>
-                        <option>Пиво</option>
-                        <option>Водка</option>
-                        <option>Рыба</option>
+                        {% for industry in industries %}
+                        <option value="{{industry.pk}}">{{ industry.name }}</option>
+                        {% endfor %}
                     </select>
-                    <input type="submit" value="Добавить">
+                    <input type="submit" name="first" value="Добавить">
                 </form>
             </div>
     
             <div>
                 <h2>Фильтры отображения</h2>
-                <form>
-                    <select>
+                <form method="get">
+                    <select name="region">
                         <option disabled selected hidden="">Регион</option>
-                        <option>Ростов</option>
-                        <option>Москва</option>
-                        <option>Питер</option>
+                        {% for region in regions %}
+                        <option value="{{region.pk}}">{{ region.name }}</option>
+                        {% endfor %}
                     </select>
-                    <select>
+                    <select name="industry">
                         <option disabled selected hidden="">Отрасль</option>
-                        <option>Пиво</option>
-                        <option>Водка</option>
-                        <option>Рыба</option>
+                        {% for industry in industries %}
+                        <option value="{{industry.pk}}">{{ industry.name }}</option>
+                        {% endfor %}
                     </select>
-                    <input type="submit" value="Применить">
+                    <input type="submit" name="second" value="Применить">
                 </form>
             </div>
     
