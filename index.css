@@ -1,0 +1,92 @@
+* {
+    font-family: 'Inter', sans-serif;
+    color: rgba(111, 111, 111, 1);
+}
+
+body {
+    margin: 0;
+    background-color: rgba(246, 247, 248, 1);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 25px 50px 25px;
+}
+
+.content div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 25px;
+}
+
+h2 {
+    margin: 0;
+    font-weight: 500;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+form {
+    display: flex;
+}
+
+form input,
+form select {
+    height: auto;
+    width: 200px;
+    border: 2px #E76530 solid;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    background-color: white;
+    margin: 0;
+    padding: 13px 20px;
+    font-size: 14px;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+} 
+
+form input:first-child,
+form select:first-child {
+    border-radius: 10px 0 0 10px;
+    border-left-width: 2px;
+}
+
+form input:last-child,
+form select:last-child {
+    border-radius: 0 10px 10px 0;
+    border-right-width: 2px;
+}
+
+input[type='submit'] {
+    background-color: #E76530;
+    color: white;
+    transition: all ease-in-out 0.1s;
+}
+
+input[type='submit']:hover {
+    background-color: #ce5626;
+    border-color: #ce5626;
+}
+
+option {
+    border-color: #E76530;
+}

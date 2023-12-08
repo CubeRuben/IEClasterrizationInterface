@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Определение доходности ИП</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="header">
+            <img src="icon.svg"/>
+            <h2>Определение доходности ИП</h2>  
+        </div>
+
+        <div class="content">
+            <div>
+                <h2>Данные об ИП</h2>
+                <form>
+                    <input type="text" placeholder="Дата открытия ИП" onfocus="(this.type='date')">
+                    <select>
+                        <option disabled selected hidden="">Регион ИП</option>
+                        <option>Ростов</option>
+                        <option>Москва</option>
+                        <option>Питер</option>
+                    </select>
+                    <select>
+                        <option disabled selected hidden="">Отрасль ИП</option>
+                        <option>Пиво</option>
+                        <option>Водка</option>
+                        <option>Рыба</option>
+                    </select>
+                    <input type="submit" value="Добавить">
+                </form>
+            </div>
+    
+            <div>
+                <h2>Фильтры отображения</h2>
+                <form>
+                    <select>
+                        <option disabled selected hidden="">Регион</option>
+                        <option>Ростов</option>
+                        <option>Москва</option>
+                        <option>Питер</option>
+                    </select>
+                    <select>
+                        <option disabled selected hidden="">Отрасль</option>
+                        <option>Пиво</option>
+                        <option>Водка</option>
+                        <option>Рыба</option>
+                    </select>
+                    <input type="submit" value="Применить">
+                </form>
+            </div>
+    
+            <div>
+                <h2>Результат кластеризации</h2>
+                <p>!Ответ!</p>
+            </div>
+        </div>
+    </body>
+</html>
